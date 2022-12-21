@@ -17,7 +17,7 @@ body{
 .title{
     text-align: center;
     text-transform: capitalize;
-    color: #726a95;
+    color: #b850b8;
     
     margin: 10px 0;
     position: relative;
@@ -74,18 +74,16 @@ body{
 
 .member p{
     font-size: 15px;
-    color: #838383;
+    color: #454242;
     line-height: 1.6;
 }
 a{
     text-decoration: none;
 }
-i{
-    padding: 2px;
-    margin: 6px;
-}
-a i:hover{
-    background-color:  rgb(202, 180, 180); transition: all 400ms;
-    background-size: cover; border-radius: 10px;
-    
-}
+
+ a i:hover{
+    transform: rotate(-15deg);
+  }
+ a i:hover::before{
+    transform: rotate(15deg);
+  }
