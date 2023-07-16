@@ -310,3 +310,102 @@ body {
     left: 10px;
   }
 }
+
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Query for iPhone 12 Pro Max (1170px x 2532px) */
+@media screen and (max-width: 1170px) {
+  /* Adjustments for iPhone 12 Pro Max */
+
+  /* Center the title and reduce font size */
+  .title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  /* Reduce font size for coach names */
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust coach images' width and height */
+  .team-row img {
+    width: 120px;
+    height: 150px;
+  }
+
+  /* Center the stats and overview details */
+  details {
+    text-align: center;
+  }
+
+  /* Adjust font size and position for player numbers */
+  .member h2 span {
+    font-size: 24px;
+    position: static;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Media Query for iPhone 12 Mini (390px x 844px) */
+@media screen and (max-width: 390px) {
+  /* Adjustments for iPhone 12 Mini */
+
+  /* Center the title and reduce font size */
+  .title {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Reduce font size for coach names */
+  h2 {
+    font-size: 16px;
+  }
+
+  /* Adjust coach images' width and height */
+  .team-row img {
+    width: 90px;
+    height: 112.5px;
+  }
+
+  /* Center the stats and overview details */
+  details {
+    text-align: center;
+  }
+
+  /* Adjust font size and position for player numbers */
+  .member h2 span {
+    font-size: 18px;
+    position: static;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* CSS Pixel Ratio of 3 (Retina Display) */
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 192dpi) {
+  /* Increase font size for coach names and player numbers on Retina displays */
+
+  /* Increase font size for coach names */
+  h2 {
+    font-size: 30px;
+  }
+
+  /* Increase font size and position for player numbers */
+  .member h2 span {
+    font-size: 48px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+}
