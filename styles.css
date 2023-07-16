@@ -79,6 +79,7 @@ body{
 }
 a{
     text-decoration: none;
+    
 }
 
  a i:hover{
@@ -87,3 +88,225 @@ a{
  a i:hover::before{
     transform: rotate(15deg);
   }
+
+  a i{
+    padding: 5px;
+  }
+  a i:hover{
+    background: rgb(193, 189, 182); border-radius: 15px; 
+    background-size: contain;
+    
+  }
+  h1{
+    font-size: 72px;
+    background: linear-gradient(-70deg, rgb(136, 119, 25), #3f53b5 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  .player-container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  
+  .player-header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+    section {
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 18px;
+    }
+  
+    
+    .personal-info {
+      margin-top: 20px;
+    }
+    
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .info-label {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .info-value {
+      font-size: 18px;
+      color: #666;
+    }
+  
+    .club-info {
+      margin-top: 20px;
+    }
+    
+    .club-info .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .club-info .info-label {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .club-info .info-value {
+      font-size: 18px;
+      color: #666;
+    }
+    
+
+    @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { .club-info{ height: 10px;
+
+  }
+  
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  /* Adjustments for mobile devices */
+  
+  /* Example: Decrease font size */
+  body {
+    font-size: 16px;
+  }
+  
+  /* Example: Adjust padding or margins for smaller screens */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Example: Stack elements vertically instead of horizontally */
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  /* Add more styles as needed for your specific website */
+}
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  /* Adjustments for mobile devices */
+
+  /* Center the title and reduce font size */
+  .title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  /* Reduce font size for coach names */
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust coach images' width and height */
+  .team-row img {
+    width: 120px;
+    height: 150px;
+  }
+
+  /* Center the stats and overview details */
+  details {
+    text-align: center;
+  }
+
+  /* Adjust font size and position for player numbers */
+  .member h2 span {
+    font-size: 24px;
+    position: static;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 769px) {
+  /* Increase font size for coach names */
+  h2 {
+    font-size: 24px;
+  }
+
+  /* Restore coach images' width and height */
+  .team-row img {
+    width: 150px;
+    height: 180px;
+  }
+
+  /* Adjust font size and position for player numbers */
+  .member h2 span {
+    font-size: 36px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+}
