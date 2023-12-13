@@ -5,42 +5,42 @@
         .player-container {
             display: flex;
             flex-direction: column;
-            
+
           }
-          
-          
+
+
           .player-header img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
           }
-          
-          
-          
+
+
+
           table {
             width: 100%;
             border-collapse: collapse;
           }
-          
+
             section {
               background-color: #f1f1f1;
               padding: 20px;
             }
-            
+
             h2 {
               font-size: 24px;
               margin-bottom: 10px;
             }
-            
+
             p {
               font-size: 18px;
             }
-          
-            
+
+
             .personal-info {
               margin-top: 20px;
             }
-            
+
             .info-row {
               display: flex;
               justify-content: space-between;
@@ -48,21 +48,21 @@
               padding: 10px 0;
               border-bottom: 1px solid #ccc;
             }
-            
+
             .info-label {
               font-weight: bold;
               font-size: 18px;
             }
-            
+
             .info-value {
               font-size: 18px;
               color: #666;
             }
-          
+
             .club-info {
               margin-top: 20px;
             }
-            
+
             .club-info .info-row {
               display: flex;
               justify-content: space-between;
@@ -70,12 +70,12 @@
               padding: 10px 0;
               border-bottom: 1px solid #ccc;
             }
-            
+
             .club-info .info-label {
               font-weight: bold;
               font-size: 18px;
             }
-            
+
             .club-info .info-value {
               font-size: 18px;
               color: #666;
@@ -137,11 +137,11 @@ body {
 
 
 
-           
-            
-    
-    
-    
+
+
+
+
+
     </style>
 
 
@@ -159,20 +159,27 @@ body {
       <h1>Abdi Farah</h1>
       <img src="abdi.PNG" alt="Player Image">
     </div>
-    
-   
+
+
     <section>
 
       <h2>Personal Information</h2>
-      
+
       <div class="personal-info">
         <div class="info-row">
           <div class="info-label">Full Name:</div>
           <div class="info-value">Abdi Farah</div>
         </div>
         <div class="info-row">
-          <div class="info-label">Date of Birth:</div>
-          <div class="info-value">June 7, 2003</div>
+
+          <div class="info-row">
+            <div class="info-label">Date of Birth:</div>
+            <div class="info-value">June 7, 2003 (Age: <span id="age"></span>)</div>
+          </div>
+
+
+
+          
         </div>
         <div class="info-row">
           <div class="info-label">Place of Birth:</div>
@@ -214,25 +221,55 @@ body {
         </div>
       </div>
     </section>
-    
+
 
     <div class="player-info">
       <p>Abdi Farah is a young American-Somali soccer player who has made waves in the world of football at the tender age of 17. Farah was born and raised in the United States, but his Somali roots have played an important role in shaping his identity and career trajectory.
 
         Growing up, Farah developed a deep love for soccer, and he spent countless hours honing his skills on the field. He was particularly drawn to the technical aspects of the game, and he worked tirelessly to improve his dribbling, passing, and shooting abilities. His hard work and dedication paid off, and he soon began to attract the attention of local coaches and scouts.
-        
+
         Farah's breakout moment came when he was recruited to play for a prestigious youth academy in his home state. This was a huge opportunity for the young player, and he seized it with both hands. He quickly established himself as a star player on the team, showcasing his impressive ball control, vision, and creativity on the field.
-        
+
         Over the years, Farah has continued to impress coaches and scouts with his talent and dedication. He has played for several different youth teams and has consistently been a standout player in every match. His ability to read the game and make smart decisions on the field has earned him a reputation as one of the most promising young players in the country.
-        
+
         Farah's achievements and accomplishments are numerous. He has won multiple MVP awards and has been named to several All-stars Teams. He has also been scouted by several professional teams, and many experts predict that he will make his professional debut in the near future.
-        
+
         Despite his young age, Farah is already making a name for himself in the soccer world. He is known for his relentless work ethic, his technical skills, and his ability to make game-changing plays. His success on the field has inspired many young players around the world, and he is widely regarded as a role model for aspiring soccer players.
-        
+
         In conclusion, Abdi Farah is a talented and dedicated young soccer player who has achieved a great deal in his career so far. His Somali heritage, American upbringing, and passion for the game have all played a role in shaping his identity and his success on the field. With his talent and drive, there is no doubt that Farah has a bright future ahead of him in the world of soccer.</p>
     </div>
-    
-    
-    
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Date of birth
+        var dob = new Date("June 7, 2003");
+
+        // Current date
+        var currentDate = new Date();
+
+        // Calculate age
+        var age = currentDate.getFullYear() - dob.getFullYear();
+
+        // Adjust age if birthday hasn't occurred yet this year
+        if (
+          currentDate.getMonth() < dob.getMonth() ||
+          (currentDate.getMonth() === dob.getMonth() &&
+            currentDate.getDate() < dob.getDate())
+        ) {
+          age--;
+        }
+
+        // Display age
+        var ageElement = document.getElementById("age");
+        if (ageElement) {
+          ageElement.textContent = age;
+        }
+      });
+    </script>
+
+
+
+
 </body>
 </html>
