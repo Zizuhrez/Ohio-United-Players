@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  
+
+<head>
+    <style>
+        .player-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .player-header img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        section {
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .personal-info {
+            margin-top: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .info-label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .club-info {
+            margin-top: 20px;
+        }
+
+        .club-info .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .club-info .info-label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .club-info .info-value {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            /* Adjustments for mobile devices */
+
+            /* Make the player image responsive */
+            .player-header img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+
+            /* Adjust font sizes for better readability on mobile */
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            /* Decrease padding for sections on mobile */
+            section {
+                padding: 10px;
+            }
+
+            /* Adjust info row layout on mobile */
+            .info-row {
+                flex-direction: column;
+            }
+
+            .info-label,
+            .info-value {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="player-container">
+        <div class="player-header">
+            <h1>Jakarta</h1>
+            <img src="" alt="Player Image">
+        </div>
+
+        <section>
+            <h2>Personal Information</h2>
+            <div class="personal-info">
+                <div class="info-row">
+                    <div class="info-label">Full Name:</div>
+                    <div class="info-value">Zakaria Jakarta</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Date of Birth:</div>
+                    <div class="info-value">Jan 1, 1995 (Age: <span id="age"></span>)</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Place of Birth:</div>
+                    <div class="info-value">Las anood, Somalia</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Height:</div>
+                    <div class="info-value">6'0" (187 cm)</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Position:</div>
+                    <div class="info-value">GK</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Club Information</h2>
+            <div class="club-info">
+                <div class="info-row">
+                    <div class="info-label">Current Team:</div>
+                    <div class="info-value">OHIO UNITED</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Number:</div>
+                    <div class="info-value">1</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Youth Career</h2>
+            <div class="club-info">
+                <div class="info-row">
+                    <div class="info-label">2013-2014</div>
+                    <div class="info-value">Ugand somali team Fc</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">2015-Current</div>
+                    <div class="info-value">Ohio United</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="player-info">
+          
+<br>
+<p>
+  Zakaria Jakarta, born in northern Somalia, embarked on his football journey at the age of 6. Growing up amidst the rich soccer culture of Somalia, his skills flourished. In his teen years, he moved to Uganda, showcasing his goalkeeping talent and contributing to the Somali Community National Team's victories, earning prestigious awards. The year 2015 marked a pivotal moment as Zakaria joined Ohio United in the USA. His prowess as a goalkeeper played a pivotal role in the team's success, securing victories and clinching every trophy within reach. Zakaria Jakarta stands as a testament to dedication, talent, and triumph on the soccer field.
+</p>
+
+        </div>
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Date of birth
+      var dob = new Date("Jan 1, 1995");
+
+      // Current date
+      var currentDate = new Date();
+
+
+      var age = currentDate.getFullYear() - dob.getFullYear();
+
+
+      if (
+        currentDate.getMonth() < dob.getMonth() ||
+        (currentDate.getMonth() === dob.getMonth() &&
+          currentDate.getDate() < dob.getDate())
+      ) {
+        age--;
+      }
+
+
+      var ageElement = document.getElementById("age");
+      if (ageElement) {
+        ageElement.textContent = age;
+      }
+    });
+  </script>
+
+
+  
