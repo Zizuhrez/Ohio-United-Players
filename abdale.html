@@ -5,42 +5,42 @@
         .player-container {
             display: flex;
             flex-direction: column;
-            
+
           }
-          
-          
+
+
           .player-header img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
           }
-          
-          
-          
+
+
+
           table {
             width: 100%;
             border-collapse: collapse;
           }
-          
+
             section {
               background-color: #f1f1f1;
               padding: 20px;
             }
-            
+
             h2 {
               font-size: 24px;
               margin-bottom: 10px;
             }
-            
+
             p {
               font-size: 18px;
             }
-          
-            
+
+
             .personal-info {
               margin-top: 20px;
             }
-            
+
             .info-row {
               display: flex;
               justify-content: space-between;
@@ -48,21 +48,21 @@
               padding: 10px 0;
               border-bottom: 1px solid #ccc;
             }
-            
+
             .info-label {
               font-weight: bold;
               font-size: 18px;
             }
-            
+
             .info-value {
               font-size: 18px;
               color: #666;
             }
-          
+
             .club-info {
               margin-top: 20px;
             }
-            
+
             .club-info .info-row {
               display: flex;
               justify-content: space-between;
@@ -70,19 +70,19 @@
               padding: 10px 0;
               border-bottom: 1px solid #ccc;
             }
-            
+
             .club-info .info-label {
               font-weight: bold;
               font-size: 18px;
             }
-            
+
             .club-info .info-value {
               font-size: 18px;
               color: #666;
             }
-            
-    
-            
+
+
+
             /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -131,7 +131,7 @@ body {
   }
 }
 
-    
+
     </style>
 </head>
 
@@ -143,21 +143,25 @@ body {
       <h1>Abdale mosa</h1>
       <img src="abdale.PNG" alt="Player Image">
     </div>
-    
-   
+
+
     <section>
 
       <h2>Personal Information</h2>
-      
+
       <div class="personal-info">
         <div class="info-row">
           <div class="info-label">Full Name:</div>
           <div class="info-value">Abdale Mosa</div>
         </div>
+
         <div class="info-row">
-          <div class="info-label">Date of Birth:</div>
-          <div class="info-value">Jan 5, 1998</div>
+            <div class="info-label">Date of Birth: </div>
+            <div class="info-value">jan 10, 1998 (Age: <span id="age"></span>)</div>
+          </div>
         </div>
+        
+        
         <div class="info-row">
           <div class="info-label">Place of Birth:</div>
           <div class="info-value">Riyadh, Saudi Arabia</div>
@@ -198,7 +202,7 @@ body {
         </div>
       </div>
     </section>
-    
+
 
     <div class="player-info">
 <p>
@@ -215,4 +219,34 @@ Off the field, Mosa is known for his humility and his dedication to his family a
 In conclusion, Abdalla Mosa is a talented soccer player who has overcome numerous challenges to pursue his dream of playing soccer. His natural talent, dedication, and humility have earned him the respect of his peers and fans alike, and he is a shining example of what can be achieved through hard work and perseverance.
 </p>
     </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Date of birth
+      var dob = new Date("Jan 10, 1998 ");
+
+      // Current date
+      var currentDate = new Date();
+
+      
+      var age = currentDate.getFullYear() - dob.getFullYear();
+
+      
+      if (
+        currentDate.getMonth() < dob.getMonth() ||
+        (currentDate.getMonth() === dob.getMonth() &&
+          currentDate.getDate() < dob.getDate())
+      ) {
+        age--;
+      }
+
+      
+      var ageElement = document.getElementById("age");
+      if (ageElement) {
+        ageElement.textContent = age;
+      }
+    });
+  </script>
+
+  
 </html>
